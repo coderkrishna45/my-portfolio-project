@@ -1,0 +1,141 @@
+#nav-bar{
+    background-color:antiquewhite;
+    padding: 20px;
+    position: relative;
+}
+
+.nav-list{
+    display: none;
+    list-style-type: none;
+}
+.nav-list a{
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
+.nav-list a:hover {
+  color: aqua; /* Using the color from your project cards */
+}
+.nav-list--visible {
+  /* Layout */
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center;   /* Centers the links horizontally in the box */
+  gap: 1rem;             /* Adds space between the links */
+
+  /* Positioning & Appearance */
+  position: absolute;      /* Makes it "float" over the page */
+  top: 48px;               /* Pushes it down from the top edge */
+  left: 10px;              /* Pushes it in from the right edge */
+  background-color: #333;
+  padding: 1.5rem;         /* Adds space inside the menu box */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+}
+@media (min-width: 768px) {
+  /* CSS rules inside here only apply if the screen is 768px or wider */
+  .nav-list{
+    display: flex;
+    /*justify-content: space-around;*/
+    gap: 2rem;
+    justify-content: flex-end;
+  }
+  .nav-toggle{
+    display: none;
+  }
+}
+.hero{
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#about {
+  max-width: 800px;
+  margin: auto; /* This shorthand works better than 0 auto 0 auto */
+  font-size: 1.2rem;
+  padding: 60px 20px; /* Add this line */
+  text-align: center;
+}
+
+#project {
+  padding: 60px 20px; /* Add this new rule */
+  text-align: center; /* This will center the "My Projects" title */
+}
+
+.projectContainer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+.projectContainer a{
+    text-decoration: none;
+    margin: 5px;
+}
+.projectCard img{
+    width: 100%;
+    display: block;
+}
+
+.projectCard{
+    background-color: aqua;
+    padding: 20px;
+    flex-basis: 300px;
+    border-radius: 28px;
+    box-shadow: 0 4px 8px rgba(42, 7, 156, 0.4);
+}
+#contact form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: auto;
+}
+#submit{
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+}
+#contact{
+    background-color: aliceblue;
+    color: blue;
+}
+#contact h2{
+    color: gray;
+}
+
+#accounts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    gap: 10px;
+}
+#SocialConnections{
+    background-color: aliceblue;
+    color: black;
+    padding: 60px 20px;
+}
+#accounts a{
+    text-decoration: none;
+    padding: 10px 18px;
+    background-color: lightgreen;
+    border-radius: 25px;
+    display: inline-block;
+  margin: 5px;
+}
+#accounts img {
+  height: 40px;
+}
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
