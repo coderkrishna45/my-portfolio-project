@@ -66,7 +66,7 @@ form.addEventListener('submit', (e) => {
     message: messageValue
   };
 
-  fetch('http://localhost:3000/submit-form', {
+  fetch('https://my-portfolio-vzoa.onrender.com/submit-form', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
