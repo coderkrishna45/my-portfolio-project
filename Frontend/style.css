@@ -1,0 +1,327 @@
+/* --- Global Styles --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Header & Navigation --- */
+header {
+  position: sticky;
+  top: 0;
+  background-color: antiquewhite;
+  z-index: 100; /* Ensure header is on top */
+}
+
+#nav-bar {
+  padding: 20px;
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-title {
+  font-size: 1.5rem; /* Makes it 50% bigger than the default text */
+  font-weight: bold;
+}
+.nav-list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: lightcoral;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  color: aqua;
+}
+
+.nav-list a.active-link {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.nav-list--visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 75px;
+  right: 20px;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Responsive Navigation (Large Screens) --- */
+@media (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-list--visible { /* Mobile menu styles don't apply on desktop */
+    all: unset; /* Resets all properties */
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    justify-content: flex-end;
+  }
+}
+
+/* --- Page Sections --- */
+.hero {
+  text-align: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#project {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* --- Project Cards --- */
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 20px auto 0 auto;
+}
+
+.projectCard {
+  background-color: aqua;
+  padding: 20px;
+  flex-basis: 300px;
+  border-radius: 28px;
+  box-shadow: 0 4px 8px rgba(42, 7, 156, 0.4);
+  text-align: left; /* Refinement: Left-align text in cards */
+}
+
+.projectCard img {
+  width: 100%;
+  display: block;
+  border-radius: 20px; /* Bonus: Rounded corners for images */
+}
+
+.projectContainer a {
+  text-decoration: none;
+  margin: 5px;
+}
+
+/* --- Contact Section --- */
+#contact {
+  background-color: aliceblue;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  color: gray;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  text-align: left; /* Keep labels left-aligned */
+}
+
+
+
+
+/* Hide the arrows on number inputs  NON STANDARD WAY OF DOING BUT ITS OKey*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+.cta-button {
+  display: inline-block; /* Allows us to set padding and margin */
+  margin-top: 2rem;      /* Adds some space above the button */
+  padding: 12px 24px;    /* Sets the button's size (top/bottom and left/right) */
+  background-color: #007bff; /* A nice, standard blue */
+  color: white;          /* White text */
+  text-decoration: none; /* Removes the default link underline */
+  border-radius: 5px;    /* Gives it slightly rounded corners */
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* This makes the hover effect smooth */
+}
+.cta-button:hover {
+  background-color: #0056b3; /* A darker blue */
+}
+
+/* Refinement: Styles for form inputs */
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Important: keeps padding inside the width */
+  font-size: 1rem;
+}
+
+#submit {
+  margin-top: 10px;
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* --- Social Connections & Footer --- */
+#SocialConnections {
+  background-color: aliceblue;
+  color: black;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#accounts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  gap: 15px;
+  padding: 0;
+}
+
+#accounts a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+#accounts img {
+  height: 40px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* --- Scroll to Top Button --- */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#scrollTopBtn:hover {
+  background-color: #333;
+}
+
+/* --- Resume Section --- */
+#resume {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* A very light grey to separate it */
+}
+
+.resume-download-btn {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 12px 24px;
+  background-color: #28a745; /* A professional green */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.resume-download-btn:hover {
+  background-color: #218838; /* A darker green */
+}
+
+.resume-content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  text-align: left;
+}
+
+.resume-column {
+  flex-basis: 300px;
+}
+
+.resume-content h3 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resume-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume-content li {
+  margin-bottom: 0.5rem;
+}
+
+.resume-item {
+  margin-bottom: 1.5rem;
+}
+
+.resume-item h4 {
+  margin-bottom: 0.25rem;
+}
+
+.resume-item p {
+  margin-top: 0;
+  color: #555;
+}

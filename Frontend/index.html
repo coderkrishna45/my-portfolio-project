@@ -9,20 +9,22 @@
 <body>
     <header>
         <nav id="nav-bar">
+            <div class="site-title">PORTFOLIO</div>
             <button class="nav-toggle">&#9776;</button>
             <ul class="nav-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
                 <li><a href="#project">Project</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#SocialConnections">SocialConnections</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#SocialConnections">Social Connections</a></li>
             </ul>
         </nav>
     </header>
     <section class="hero" id="home">
         <h1>Bal Krishan Kumar</h1>
         <h2> Hi , I am an aspiring software developer with Good DSA grasp and Starting WebDevelopment with HTML , CSS and JS till now </h2>
+        <a href="#project" class="cta-button">View My Work</a>
     </section>
     
     
@@ -36,32 +38,70 @@
         <h2>My Projects</h2>
         <div class="projectContainer">
             <div class="projectCard" id="project1">
-            <h3>Project 1</h3>
-            <p>This is my myntra clone project i have done while learning Html and Css</p>
-            <img src="myntra.png" alt="Screenshot of Myntra clone project">
-            <a href="#">Live Demo</a>
-            <a href="#">Code Link</a>
-        </div>
-        <div class="projectCard" id="project2">
-            <h3>Project 2</h3>
-            <p>This is my myntra clone project i have done while learning Html and Css</p>
-            <img src="myntra.png" alt="Screenshot of Myntra clone project">
-            <a href="#">Live Demo</a>
-            <a href="#">Code Link</a>
-        </div>
-        <div class="projectCard" id="project3">
-            <h3>Project 3</h3>
-            <p>This is my myntra clone project i have done while learning Html and Css</p>
-            <img src="myntra.png" alt="Screenshot of Myntra clone project">
-            <a href="#">Live Demo</a>
-            <a href="#">Code Link</a>
-        </div>
+                <h3>Project 1</h3>
+                <p>This is my myntra clone project i have done while learning Html and Css</p>
+                <img src="myntra.png" alt="Screenshot of Myntra clone project">
+                <a href="#">Live Demo</a>
+                <a href="#">Code Link</a>
+            </div>
+            <div class="projectCard" id="project2">
+                <h3>Project 2</h3>
+                <p>This is my myntra clone project i have done while learning Html and Css</p>
+                <img src="myntra.png" alt="Screenshot of Myntra clone project">
+                <a href="#">Live Demo</a>
+                <a href="#">Code Link</a>
+            </div>
+            <div class="projectCard" id="project3">
+                <h3>Project 3</h3>
+                <p>This is my myntra clone project i have done while learning Html and Css</p>
+                <img src="myntra.png" alt="Screenshot of Myntra clone project">
+                <a href="#">Live Demo</a>
+                <a href="#">Code Link</a>
+            </div>
         </div>
     </section>
     
+    <!-- NEW RESUME SECTION -->
+    <section id="resume">
+        <h2>My Resume</h2>
+        <a href="resume.pdf" class="resume-download-btn" download>Download Resume (PDF)</a>
+        <div class="resume-content">
+            <div class="resume-column">
+                <h3>Skills</h3>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Node.js & Express</li>
+                    <li>React (Learning)</li>
+                    <li>Git & GitHub</li>
+                    <li>Data Structures & Algorithms</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="resume-column">
+                <h3>Experience</h3>
+                <div class="resume-item">
+                    <h4>Personal Portfolio Website</h4>
+                    <p>Designed and developed a fully responsive, full-stack personal portfolio from scratch. Implemented a Node.js backend to handle contact form submissions.</p>
+                </div>
+                <div class="resume-item">
+                    <h4>Myntra Clone Project</h4>
+                    <p>Built a static clone of the Myntra homepage, focusing on complex layouts and responsive design with pure HTML and CSS.</p>
+                </div>
+            </div>
+            <div class="resume-column">
+                <h3>Education</h3>
+                <div class="resume-item">
+                    <h4>Techno Main Salt Lake , Kolkata </h4>
+                    <p>Bachelor of Technology in Computer Science and IoT (2023 - 2027)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <h2>Would you like some help ? then Contact me </h2>
-        <form action="submit" novalidate>
+        <form action="http://localhost:3000/submit-form" novalidate method="post">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" placeholder="Enter your name.">
             <label for="email">Email:</label>
@@ -85,6 +125,8 @@
             <li><a href="https://www.codechef.com/users/coderkrishna26"target="_blank" title="CodeChef"><img src="https://cdn.simpleicons.org/codechef/333" alt="CodeChef Profile"></a></li>
         </ul>
     </section>
+
+    <button id="scrollTopBtn" title="Go to top">&#8679;</button>
     <footer>
         <p> &copy; 2025 Bal Krishan Kumar </p>
     </footer>
