@@ -295,7 +295,9 @@ footer {
 }
 
 .resume-column {
-  flex-basis: 300px;
+  width:fit-content;
+  flex-basis: min(25%);
+  font-size: (2rem);
 }
 
 .resume-content h3 {
